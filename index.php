@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="CSS/main.css" type="text/css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
 <body>
 
 <?php
