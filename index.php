@@ -3,7 +3,7 @@
 <body>
 
 <?php
-include'CSS/main.css';
+include'./CSS/main.css';
 echo "My PHP script!";
 ?>
 
