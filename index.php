@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="CSS/main.css" type="text/css">
 <body>
 
 <?php
-include'CSS/main.css';
 echo "My PHP script!";
 ?>
 
