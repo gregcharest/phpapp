@@ -4,7 +4,8 @@
 <body>
 
 <?php
-echo "My PHP script!";
+echo "<p>";
+echo "<h2>Chidi's incredible website!<h2>";
 ?>
 
 </body>
