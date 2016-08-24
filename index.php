@@ -5,7 +5,7 @@
 
 <?php
 echo "<p>";
-echo "<h2>Chidi's incredible website!<h2>";
+echo "<h2><h2>";
 ?>
 
 </body>
