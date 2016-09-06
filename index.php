@@ -4,7 +4,7 @@
 <body>
 <?php
 echo "<p>";
-echo "<p id="header">Partners Health Care</p>";
+echo "<p id=header>Partners Health Care</p>";
 echo "<h2>TSO's Strategy Leadership Meeting Website</h2>";
 echo "
 <h3>
