@@ -1,56 +1,49 @@
+<!DOCTYPE html>
 <html>
-<head><title>CSS Layout</title>
-<!-- 
-we use an internal CSS 
-this CSS Example write in windows notepad by Oka Dayendra
--->
-<style type="text/css">
-body{background-color : #EEEEEE;}
-div#main{width : 900px; border : 1px solid #606060; background-color : #FFFFFF; margin : 0 auto; /* margin : 0 auto; to place div id="main" in center 
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Online info page of <?php echo $profile->fullName()?>. Learn more about me and download a vCard." />
 
-position */}
-div#header{width : 900px; height : 100px; background-color : #303030; color : #FFFFFF;}
-div#body{width : 900px; height : 400px;color : #000000;}
-div#footer{width : 900px; height : 30px; background-color : #303030; color ; #FFFFFF;}
-</style>
-</head>
-<body>
-<!-- here is main layer -->
-<div id="main">
-	<div id="header"><!-- here is a header --></div>
-	<div id="body"><!-- here is a content website --></div>
-	<div id="footer"><!-- here is a footer --></div>
-</div>
-</body>
-</html>
+        <title>Creating a PHP and CSS Powered About Page  | Tutorialzine Demo</title>
 
-<html>
-<head><title>Containers Update - TERC</title>
-<!-- 
-we use an internal CSS 
-this CSS Example write in windows notepad by Oka Dayendra
--->
-<style type="text/css">
-body{background-color : #EEEEEE;}
-div#main{width : 900px; border : 1px solid #606060; background-color : #FFFFFF; margin : 0 auto; /* margin : 0 auto; to place div id="main" in center 
+        <!-- Our CSS stylesheet file -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
 
-position */}
-div#header{width : 900px; height : 100px; background-color : #303030; color : #FFFFFF;}
-div#body{width : 900px; height : 400px;color : #000000;}
-div#kiri{width : 200px;height : 400px;background-color : #FFCCCC; float : left;}
-div#kanan{width : 700px; height : 400px;float : left;}
-div#footer{width : 900px; height : 30px; background-color : #303030; color ; #FFFFFF;}
-</style>
-</head>
-<body>
-<!-- here is main layer -->
-<div id="main">
-	<div id="header"><!-- here is a header --></div>
-	<div id="body"><!-- here is a content website -->
-		<div id="kiri"><!-- here is a left content --></div>
-		<div id="kanan"><!-- here is a right content --></div>
-	</div>
-	<div id="footer"><!-- here is a footer --></div>
-</div>
-</body>
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+		<section id="infoPage">
+
+    		<img src="<?php echo $profile->photoURL()?>" alt="<?php echo $profile->fullName()?>" width="164" height="164" />
+
+            <header>
+                <h1><?php echo $profile->fullName()?></h1>
+                <h2><?php echo $profile->tags()?></h2>
+            </header>
+
+            <p class="description"><?php echo nl2br($profile->description())?></p>
+
+            <a href="<?php echo $profile->facebook()?>" class="grayButton facebook">Find me on Facebook</a>
+            <a href="<?php echo $profile->twitter()?>" class="grayButton twitter">Follow me on Twitter</a>
+
+            <ul class="vcard">
+                <li class="fn"><?php echo $profile->fullName()?></li>
+                <li class="org"><?php echo $profile->company()?></li>
+                <li class="tel"><?php echo $profile->cellphone()?></li>
+                <li><a class="url" href="<?php echo $profile->website()?>"><?php echo $profile->website()?></a></li>
+            </ul>
+
+		</section>
+
+        <section id="links">
+        	<a href="?vcard" class="vcard">Download as V-Card</a>
+            <a href="?json" class="json">Get as a JSON feed</a>
+            <p>In this tutorial: <a href="http://www.flickr.com/photos/levycarneiro/4144428707/">Self Portrait</a> by <a href="http://www.flickr.com/photos/levycarneiro/">Levy Carneiro Jr</a></p>
+        </section>
+
+    </body>
 </html>
